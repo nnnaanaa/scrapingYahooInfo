@@ -10,4 +10,3 @@ route_confirmation_url = [
 
 # /* Yahoo天気予報 */
 weather_forecast_url = 'https://weather.yahoo.co.jp/weather/jp/13/4410.html'
-
