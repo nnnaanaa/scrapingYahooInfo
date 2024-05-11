@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+"""列車運行状況
+"""
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -16,7 +19,7 @@ def train_status():
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # /* タイトル関連 */
+        # /* タイトル取得 */
         elm_label = soup.find(class_='labelLarge')
         title_text = elm_label.find(class_='title').text
 
@@ -31,3 +34,6 @@ def train_status():
     
     join_texts = ''.join(texts)
     return join_texts
+
+if __name__ == "__main__":
+    pass

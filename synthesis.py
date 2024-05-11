@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+"""VOICEVOX 音声合成
+"""
+
 import requests
 import json
 import time
@@ -46,3 +49,6 @@ def play_wav(file_path):
     except KeyboardInterrupt:
         pygame.mixer.music.stop()
         pygame.quit()
+
+if __name__ == "__main__":
+    pass
