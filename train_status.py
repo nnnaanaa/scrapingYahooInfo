@@ -31,3 +31,6 @@ def train_status():
     
     join_texts = ''.join(texts)
     return join_texts
+
+if __name__ == "__main__":
+    pass

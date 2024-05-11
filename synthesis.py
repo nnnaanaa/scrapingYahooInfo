@@ -46,3 +46,6 @@ def play_wav(file_path):
     except KeyboardInterrupt:
         pygame.mixer.music.stop()
         pygame.quit()
+
+if __name__ == "__main__":
+    pass
