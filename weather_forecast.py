@@ -6,8 +6,8 @@
 import requests
 from bs4 import BeautifulSoup
 import re
-
-url = 'https://weather.yahoo.co.jp/weather/jp/13/4410.html'
+import config
+import sys
 
 def weather_forecast_text():
     forecast_dict = weather_forecast()
@@ -18,7 +18,7 @@ def weather_forecast_text():
 
 def weather_forecast():
     try:
-        response = requests.get(url)
+        response = requests.get(config.weather_forecast_url)
         soup = BeautifulSoup(response.text, 'html.parser')
 
         # /* 日付 */
@@ -68,7 +68,7 @@ def weather_forecast():
 
     except Exception as e:
         print(e)
-        return False
+        sys.exit(1)
 
     return forecast_dict
 
