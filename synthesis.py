@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+"""VOICEVOX 音声合成
+"""
+
 import requests
 import json
 import time
