@@ -6,7 +6,7 @@ import time
 import pygame
 import os
 
-ipaddress = "192.168.0.11"
+ipaddress = "localhost"
 port = "50021"
 
 def synthesis(text, filename, speaker=54, max_retry=20):
