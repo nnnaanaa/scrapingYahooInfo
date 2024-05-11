@@ -5,17 +5,12 @@
 
 import requests
 from bs4 import BeautifulSoup
-
-url_dict = [
-    'https://transit.yahoo.co.jp/diainfo/84/0',
-    'https://transit.yahoo.co.jp/diainfo/71/0',
-    'https://transit.yahoo.co.jp/diainfo/38/0',
-]
+import config
 
 def train_status():
     texts = []
 
-    for url in url_dict:
+    for url in config.route_confirmation_url:
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
 
