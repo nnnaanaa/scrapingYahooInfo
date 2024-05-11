@@ -12,6 +12,8 @@ import os
 
 def main():
     wav_file = f"./audio/audio.wav"
+    current_directory = os.path.dirname(os.path.abspath(__file__))
+    wav_file = os.path.join(current_directory, wav_file)
 
     try:
         if not os.path.exists(os.path.dirname(wav_file)): os.makedirs(os.path.dirname(wav_file)) # フォルダが存在しないとき
