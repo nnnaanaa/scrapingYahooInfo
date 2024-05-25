@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 from train_status import train_status
 from weather_forecast import weather_forecast_text
@@ -17,7 +17,7 @@ def main():
 
     try:
         if not os.path.exists(os.path.dirname(wav_file)): os.makedirs(os.path.dirname(wav_file)) # フォルダが存在しないとき
-        text = "{}。{}時になりました。".format(greeting_text() ,datetime.now().hour)
+        text = "{}時になりました。".format(datetime.now().hour)
 
         # /* 列車運行情報 */
         text += "現在の列車の運行情報をお知らせします。"
@@ -28,8 +28,6 @@ def main():
         text += "続いて天気予報です。"
         weather_text = weather_forecast_text()
         text += weather_text
-
-        text += "本日もななひらインフォメーションサービスをご利用いただきありがとうございました。"
 
         # /* WAVファイル生成 */
         synthesis(text, wav_file)

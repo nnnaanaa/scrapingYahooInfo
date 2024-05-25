@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 # /* Yahoo路線情報 */
 route_confirmation_url = [
